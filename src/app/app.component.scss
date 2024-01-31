@@ -1,0 +1,50 @@
+.clockContainer {
+    width: 116px;
+    height: 116px;
+    border-radius: 100%;
+    background-color: #f3f3f3;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.25), #f3f3f3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    .minutes {
+        background-image: url(../assets/images/minutes.png);
+        width: 100px;
+        height: 100px;
+        background-size: contain;
+        position: absolute;
+    }
+    .hours {
+        background-image: url(../assets/images/hours.png);
+        width: 100px;
+        height: 100px;
+        background-size: contain;
+        position: absolute;
+    }
+    .dot {
+        background-color: white;
+        border-radius: 100px;
+        width: 7px;
+        height: 7px;
+        z-index: 999;
+    }
+    .hands { 
+        width: 8px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        position: absolute;
+        &.hour{ 
+            height: 37px;
+            background-image: url(../assets/images/hourHand.png);
+        }
+        &.minute{ 
+            height: 57px;
+            background-image: url(../assets/images/minutesHand.png);
+        }
+        &.second{ 
+            height: 198px;
+            background-image: url(../assets/images/secondHand.png);
+        }
+    }
+}
